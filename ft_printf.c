@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.c                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:20:46 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/20 08:11:22 by rukobaya         ###   ########.fr       */
+/*   Updated: 2022/06/20 20:57:43 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libftprintf.h"
+# include "printf.h"
 
 int	ft_output_c(const char c)
 {
@@ -209,7 +209,7 @@ int main(void)
 	printf("\nr_ft = %d\n", r_ft_s);
 	printf("--- printf ---\n");
 	int r_s = printf("%s", "test");
-	printf("\nr_ft = %d\n", r_ft_s);
+	printf("\nr_ft = %d\n", r_s);
 	
 	printf("\n=== d ===\n");
 	printf("--- ft_printf ---\n");

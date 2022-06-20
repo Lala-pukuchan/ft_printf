@@ -6,11 +6,11 @@
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 16:58:15 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/20 07:55:08 by rukobaya         ###   ########.fr       */
+/*   Updated: 2022/06/20 20:57:23 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "printf.h"
 
 static int	ft_getpower(int p)
 {
