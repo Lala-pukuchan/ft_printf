@@ -16,7 +16,6 @@ int	ft_printf(const char * inputs, ...)
 {
 	int	output_len;
     va_list	input_list;
-	// mallocをどこで利用するのか要確認。
     va_start(input_list, inputs);
 	output_len = ft_sort(inputs, input_list);
     va_end(input_list);
@@ -73,7 +72,6 @@ int	ft_printf(const char * inputs, ...)
 	int r_ft_u = ft_printf("%u", 24);
 	printf("\nr_ft = %i\n", r_ft_u);
 	printf("--- printf ---\n");
-	// [] To Do: printfにintの最大値を超えたものを入れると、%ldに変更するようにwarningが出て実行できない。
 	int r_u = printf("%u", 24);
 	printf("\nr = %d\n", r_u);
 
