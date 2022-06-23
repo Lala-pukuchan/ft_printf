@@ -14,7 +14,7 @@
 
 int	ft_printf(const char *inputs, ...)
 {
-	int     output_len;
+	int		output_len;
 	va_list input_list;
 
 	va_start(input_list, inputs);

@@ -12,7 +12,29 @@
 
 #include "ft_printf.h"
 
-int	ft_sort(const char *inputs, va_list input_list)
+int	ft_sort_inputs(const char c, va_list vl)
+{
+	int	len;
+
+	len = 0;
+	if (c == 'c')
+		len += ft_output_c(va_arg(vl, int));
+	if (c == 's')
+		len += ft_output_s(va_arg(vl, char*));
+	if (c == 'p')
+		len += ft_output_p((unsigned long long)va_arg(vl, void *));
+	if (c == 'd' || c == 'i')
+		len += ft_output_d(va_arg(vl, int));
+	if (c == 'u')
+		len += ft_output_u(va_arg(vl, unsigned int));
+	if (c == 'x' || c == 'X')
+		len += ft_output_x(va_arg(vl, long long), c);
+	if (c == '%')
+		len += ft_output_c('%');
+	return (len);
+}
+
+int	ft_sort(const char *inputs, va_list vl)
 {
 	int	len;
 
@@ -22,20 +44,7 @@ int	ft_sort(const char *inputs, va_list input_list)
 		if (*inputs == '%')
 		{
 			inputs++;
-			if (*inputs == 'c')
-				len += ft_output_c(va_arg(input_list, int));
-			if (*inputs == 's')
-				len += ft_output_s(va_arg(input_list, char*));
-			if (*inputs == 'p')
-				len += ft_output_p((unsigned long long)va_arg(input_list, void *));
-			if (*inputs == 'd' || *inputs == 'i')
-				len += ft_output_d(va_arg(input_list, int));
-			if (*inputs == 'u')
-				len += ft_output_u(va_arg(input_list, unsigned int));
-			if (*inputs == 'x' || *inputs == 'X')
-				len += ft_output_x(va_arg(input_list, long long), *inputs);
-			if (*inputs == '%')
-				len += ft_output_c('%');
+			len += ft_sort_inputs(*inputs, vl);
 			inputs++;
 		}
 		else
@@ -43,4 +52,5 @@ int	ft_sort(const char *inputs, va_list input_list)
 			len += ft_output_c(*inputs++);
 		}
 	}
+	return (len);
 }
