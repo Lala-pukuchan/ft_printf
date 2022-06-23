@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
 static char	*ft_convert(unsigned long n, int base, char *str)
 {
@@ -38,7 +38,7 @@ static char	*ft_convert(unsigned long n, int base, char *str)
 	return (p);
 }
 
-int	ft_output_p(unsigned long long p) 
+int	ft_output_p(unsigned long long p)
 {
 	char	*converted;
 	int		len;
@@ -50,7 +50,7 @@ int	ft_output_p(unsigned long long p)
 	return (len + 2);
 }
 
-int	ft_output_x(long long n, int upper_flag) 
+int	ft_output_x(long long n, int upper_flag)
 {
 	char	*converted;
 	int		len;

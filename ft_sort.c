@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
-int	ft_sort(const char* inputs, va_list input_list)
+int	ft_sort(const char *inputs, va_list input_list)
 {
 	int	output_len;
 
@@ -22,38 +22,22 @@ int	ft_sort(const char* inputs, va_list input_list)
 		if (*inputs == '%')
 		{
 			inputs++;
-			switch (*inputs)
-			{
-				case 'c':
-					output_len += ft_output_c(va_arg(input_list, int));
-					break;
-				case 's':
-					output_len += ft_output_s(va_arg(input_list, char*));
-					break;
-				case 'p':
-					output_len += ft_output_p((unsigned long long)va_arg(input_list, void *));
-					break;
-				case 'd':
-					output_len += ft_output_d(va_arg(input_list, int));
-					break;
-				case 'i':
-					output_len += ft_output_d(va_arg(input_list, int));
-					break;
-				case 'u':
-					output_len += ft_output_u(va_arg(input_list, unsigned int));
-					break;
-				case 'x':
-					output_len += ft_output_x(va_arg(input_list, long long), 0);
-					break;
-				case 'X':
-					output_len += ft_output_x(va_arg(input_list, long long), 1);
-					break;
-				case '%':
-					output_len += ft_output_c('%');
-					break;
-				default:
-					break;
-			}
+			if (*inputs == 'c')
+				output_len += ft_output_c(va_arg(input_list, int));
+			if (*inputs == 's')
+				output_len += ft_output_s(va_arg(input_list, char*));
+			if (*inputs == 'p')
+				output_len += ft_output_p((unsigned long long)va_arg(input_list, void *));
+			if (*inputs == 'd' || *inputs == 'i')
+				output_len += ft_output_d(va_arg(input_list, int));
+			if (*inputs == 'u')
+				output_len += ft_output_u(va_arg(input_list, unsigned int));
+			if (*inputs == 'x')
+				output_len += ft_output_x(va_arg(input_list, long long), 0);
+			if (*inputs == 'X')
+				output_len += ft_output_x(va_arg(input_list, long long), 1);
+			if (*inputs == '%') 
+				output_len += ft_output_c('%');
 			inputs++;
 		} else {
 			output_len += ft_output_c(*inputs++);

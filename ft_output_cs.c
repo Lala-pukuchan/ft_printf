@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_output_c(const char c)
 {
@@ -18,7 +18,7 @@ int	ft_output_c(const char c)
 	return (1);
 }
 
-int	ft_output_s(char* str)
+int	ft_output_s(char *str)
 {
 	if (!str)
 	{

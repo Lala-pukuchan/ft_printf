@@ -55,11 +55,11 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char    *ft_utoa(unsigned int n);
 int		ft_output_c(const char c);
-int		ft_output_s(char* str);
+int		ft_output_s(char *str);
 int		ft_output_d(int n);
 int		ft_output_u(unsigned int n);
 int     ft_output_p(unsigned long long p);
 int     ft_output_x(long long n, int upper_flag);
 int     ft_sort(const char* inputs, va_list input_list);
-int     ft_printf(const char * inputs, ...);
+int     ft_printf(const char *inputs, ...);
 #endif
