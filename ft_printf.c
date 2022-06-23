@@ -15,7 +15,7 @@
 int	ft_printf(const char *inputs, ...)
 {
 	int		output_len;
-	va_list input_list;
+	va_list	input_list;
 
 	va_start(input_list, inputs);
 	output_len = ft_sort(inputs, input_list);
