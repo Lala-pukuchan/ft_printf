@@ -50,12 +50,12 @@ int	ft_output_p(unsigned long long p)
 	return (len + 2);
 }
 
-int	ft_output_x(long long n, int upper_flag)
+int	ft_output_x(long long n, char c)
 {
 	char	*converted;
 	int		len;
 
-	if (upper_flag)
+	if (c == 'X')
 		converted = ft_convert((unsigned int)n, 16, "0123456789ABCDEF");
 	else
 		converted = ft_convert((unsigned int)n, 16, "0123456789abcdef");
