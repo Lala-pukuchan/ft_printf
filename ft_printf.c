@@ -16,7 +16,6 @@ int	ft_printf(const char * inputs, ...)
 {
 	int	output_len;
     va_list	input_list;
-	// mallocをどこで利用するのか要確認。
     va_start(input_list, inputs);
 	output_len = ft_sort(inputs, input_list);
     va_end(input_list);

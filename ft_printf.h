@@ -18,9 +18,6 @@
 # include <limits.h>
 # include <stdarg.h>
 
-# include <stdio.h> // delete later
-
-/* libft */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -56,8 +53,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-/* printf */
 char    *ft_utoa(unsigned int n);
 int		ft_output_c(const char c);
 int		ft_output_s(char* str);

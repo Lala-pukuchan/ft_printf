@@ -14,7 +14,6 @@
 
 int	ft_output_c(const char c)
 {
-	// NULL処理必要か？
 	ft_putchar_fd(c, 1);
 	return (1);
 }
