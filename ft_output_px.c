@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_output_px.c                                        :+:      :+:    :+:   */
+/*   ft_output_px.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 10:20:46 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/20 20:57:43 by rukobaya         ###   ########.fr       */
+/*   Created: 2022/06/23 15:46:05 by rukobaya          #+#    #+#             */
+/*   Updated: 2022/06/23 15:46:37 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+# include "ft_printf.h"
 
 // 2進数の場合、8 -> 100
 // 8%2=0 8/2=4, 4%2=0 4/2=2, 2%2=0 2/2=1
@@ -21,8 +23,10 @@ static char	*ft_convert(unsigned long n, int base, char *str)
 	unsigned long	tmp;
 	char			*p;
 
-	count = 0;
+	if (n == 0)
+		return (ft_strdup("0"));
 	tmp = n;
+	count = 0;
 	while (1 <= tmp)
 	{
 		tmp /= base;
@@ -65,10 +69,12 @@ int	ft_output_x(long long n, int upper_flag)
 	int		len;
 
 	// アドレス値を、16進数で出力する為。
+	// LONG_MAXをUNSIGNED_INT_MAXで出力したいので、unsigned intに変換。
+	// intが負の値の場合は？
 	if (upper_flag)
-		converted = ft_convert(n, 16, "0123456789ABCDEF");
+		converted = ft_convert((unsigned int)n, 16, "0123456789ABCDEF");
 	else
-		converted = ft_convert(n, 16, "0123456789abcdef");
+		converted = ft_convert((unsigned int)n, 16, "0123456789abcdef");
 	// x, Xの場合、0xを先頭につける必要無し。
 	// 先頭に16進数の目印である0xをつける。（先に出力してしまう。）
 	// ft_output_s("0x");

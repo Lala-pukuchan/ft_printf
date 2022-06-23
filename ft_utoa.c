@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/16 16:58:15 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/20 20:57:23 by rukobaya         ###   ########.fr       */
+/*   Created: 2022/06/23 15:46:25 by rukobaya          #+#    #+#             */
+/*   Updated: 2022/06/23 15:46:26 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_getpower(int p)
 {

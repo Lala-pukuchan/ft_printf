@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:20:46 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/20 21:33:12 by rukobaya         ###   ########.fr       */
+/*   Updated: 2022/06/23 16:40:49 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_H
+#ifndef FT_PRINTF_H
 
-# define LIBFT_PRINTF_H
+# define FT_PRINTF_H
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
@@ -59,9 +59,12 @@ void	ft_putnbr_fd(int n, int fd);
 
 /* printf */
 char    *ft_utoa(unsigned int n);
-int     ft_sort(const char* inputs, va_list input_list);
-int		ft_output_d(int n);
-int		ft_output_u(unsigned int n);
 int		ft_output_c(const char c);
 int		ft_output_s(char* str);
+int		ft_output_d(int n);
+int		ft_output_u(unsigned int n);
+int     ft_output_p(unsigned long long p);
+int     ft_output_x(long long n, int upper_flag);
+int     ft_sort(const char* inputs, va_list input_list);
+int     ft_printf(const char * inputs, ...);
 #endif

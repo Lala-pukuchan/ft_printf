@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_output_du.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/23 15:45:52 by rukobaya          #+#    #+#             */
+/*   Updated: 2022/06/23 15:45:53 by rukobaya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-# include "printf.h"
+# include "ft_printf.h"
 
 int	ft_output_d(int n)
 {
@@ -24,3 +35,4 @@ int	ft_output_u(unsigned int n)
 	free(p);
 	return (len);
 }
+
