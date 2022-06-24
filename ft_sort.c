@@ -6,7 +6,7 @@
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:46:16 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/23 15:46:20 by rukobaya         ###   ########.fr       */
+/*   Updated: 2022/06/24 14:29:46 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_sort_inputs(const char c, va_list vl)
 	if (c == 'c')
 		len += ft_output_c(va_arg(vl, int));
 	if (c == 's')
-		len += ft_output_s(va_arg(vl, char* ));
+		len += ft_output_s(va_arg(vl, char *));
 	if (c == 'p')
 		len += ft_output_p((unsigned long long)va_arg(vl, void *));
 	if (c == 'd' || c == 'i')
