@@ -13,10 +13,6 @@ LIBFTNAME = libft.a
 
 all: $(NAME)
 
-# make -CでPWDを変更せずに、サブディレクトリのMakefileを実行できる。
-# libft.aをlibftprintf.aにmvすることで、fcleanの際に、libft.aを削除する工程を省略。
-# make -C $(LIBFTDIR)
-
 $(NAME): $(OBJS)
 	make -C $(LIBFTDIR)
 	mv $(LIBFTDIR)$(LIBFTNAME) ./$(NAME)
@@ -31,5 +27,4 @@ fclean: clean
 
 re: fclean all
 
-# PHONYで同一ファイル名が存在してもコマンドが利用可能になる。
 .PHONY: all fclean clean re
