@@ -6,7 +6,7 @@
 /*   By: rukobaya <rukobaya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:20:46 by rukobaya          #+#    #+#             */
-/*   Updated: 2022/06/23 16:40:49 by rukobaya         ###   ########.fr       */
+/*   Updated: 2022/06/25 11:33:16 by rukobaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		ft_output_s(char *str);
 int		ft_output_d(int n);
 int		ft_output_u(unsigned int n);
 int		ft_output_p(unsigned long long p);
-int		ft_output_x(long long n, int upper_flag);
+int		ft_output_x(long long n, char c);
 int		ft_sort(const char *inputs, va_list input_list);
 int		ft_printf(const char *inputs, ...);
 #endif
